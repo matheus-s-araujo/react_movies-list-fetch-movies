@@ -9,7 +9,7 @@ export const App = () => {
 
   const addMovie = (movie: Movie) => {
     setMovies(prevMovies => {
-      if (movies.find(m => m.imdbId === movie.imdbId)) {
+      if (prevMovies.find(m => m.imdbId === movie.imdbId)) {
         return prevMovies;
       } else {
         return [...prevMovies, movie];
